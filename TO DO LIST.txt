@@ -1,0 +1,41 @@
+- dar mas info en todas las partes ✅
+- dar explicaciones de cosas (como encontrar cilindrado, ICAO, etc) ✅
+- dividir huella de vivienda por los miembros de la casa (osea, huella total / 5 para una casa con 5 miembros) ✅
+- conversiones ✅
+- limpiar campos ✅
+- guardar por partes la huella (osea, en variables fijos) ✅
+- hacer posible el ingreso de varios autos, motos y vuelos. ✅
+- encontrar forma de calcular distancia entre aeropuertos ✅?
+
+- RE-DO ALL OF FLIGHTS.JS ✅
+
+- hacer pantalla de resultados (tabla: "campo - huella") [almost, base is done, make it look better]
+- mostrar suma total en dicha pantalla ✅
+- comparar con el promedio de huella de carbon en el pais elegido (?) [on hold]
+- hacer todo mas lindo
+- find accurate values for everything
+
+<!--    <h1>
+      <div>FREAKY</div>
+      Calculator
+    </h1>
+    <img class="freaky" src="img/tongue-apple.png" alt="" />
+    -->
+
+- tabla intermedia (relacionado con el id de huella)
+- edad
+- nombre
+- email (dispuesto a rtecibir?)
+- sos estudiante? (si/no)
+- todos los valores
+- conociendo la huwella, estas dispuesto compensar? (si/no)
+- recomendaciones
+
+
+- al final, saca estadistica 
+- que medis? (evento o individual)
+
+PARA EVENTO: 
+- ejemplo practico (el pungo)
+- cuantas personas vinieron en auto? (estacionamento para estimado)
+- cuantos colectivos fueron/vinieron

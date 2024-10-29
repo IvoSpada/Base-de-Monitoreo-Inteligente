@@ -1,0 +1,166 @@
+css incase calcSection doesnt work:
+
+.calcDiv {
+  display: flex;
+  justify-content: left;
+  border: 1px solid mediumseagreen;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 15px;
+}
+.calcDiv img {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+  float: left;
+}
+.textContainer {
+  margin-left: 10px;
+}
+.calcDiv h2 {
+  font-size: 2em;
+  color: seagreen;
+  font-family: AnelizaBold;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+.calcDiv p {
+  margin-top: 10px;
+  font-size: 1.25em;
+  text-align: left;
+  color: black;
+}
+.calcDiv form {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25;
+}
+
+
+
+
+shit table (w/ css below)
+<div class="viviendaForm">
+            <div class="form-group">
+              <label for="electricidad">Electricidad:</label>
+              <input
+                type="text"
+                id="electricidad"
+                name="electricidad"
+                placeholder="kWh"
+              />
+              <p>a un factor de</p>
+              <input type="text" value="0.2881" readonly /> kgCO2e/kWh
+              <a href="#">¿qué es esto?</a>
+            </div>
+
+            <div class="form-group">
+              <label for="gasNatural">Gas natural:</label>
+              <input type="text" id="gasNatural" name="gasNatural" />
+              <select>
+                <option value="kWh">kWh</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="gasoleo">Gasóleo:</label>
+              <input type="text" id="gasoleo" name="gasoleo" />
+              <select>
+                <option value="litros">litros</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="carbon">Carbón:</label>
+              <input type="text" id="carbon" name="carbon" />
+              <select>
+                <option value="toneladas">toneladas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="glp">GLP:</label>
+              <input type="text" id="glp" name="glp" />
+              <select>
+                <option value="litros">litros</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="propano">Propano:</label>
+              <input type="text" id="propano" name="propano" />
+              <select>
+                <option value="litros">litros</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pellets">Pellets de madera:</label>
+              <input type="text" id="pellets" name="pellets" />
+              <select>
+                <option value="toneladas">toneladas</option>
+              </select>
+            </div>
+            <button type="button">Calcular la huella de la vivienda</button>
+          </div>
+
+.viviendaForm {
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.viviendaForm label {
+  display: inline-block;
+  width: 100px; 
+  text-align: left;
+  font-size: 12.5px;
+}
+.viviendaForm input {
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 30px;
+}
+.viviendaForm select {
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.viviendaForm button {
+  margin-top: 10px;
+  width: 250px;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0; /* Remove bottom margin to stack them closely
+}
+
+<tr>
+              <td><label for="electricidad">Electricidad:</label></td>
+              <td>
+                <input
+                  class="electricity"
+                  type="text"
+                  id="electricidad"
+                  name="electricidad"
+                  placeholder="kWh"
+                />
+                <p id="factor">a un factor de: </p>
+                <input class="electricity" type="text" value="0.2881" readonly /> kgCO2e/kWh
+              </td> 
+            </tr>
