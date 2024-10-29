@@ -140,11 +140,27 @@
     height: 1.5em;
     text-align: left;
   }
+
+  #inicio {
+    display: none;
+  }
   #vivienda {
-    display: flex;
+    display: none;
+  }
+  #vuelos {
+    display: none;
   }
   #coche {
-    display: flex;
+    display: none;
+  }
+  #moto {
+    display: none;
+  }
+  #bondi {
+    display: none;
+  }
+  #resultados {
+    display: none;
   }
   #cantDePersonas {
     width: 1.5em;
