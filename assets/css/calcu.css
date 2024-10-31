@@ -239,5 +239,12 @@
     margin-top: 10px;
     font-size: 1.25em;
   }
+  .volverIndex {
+    font-size: 20px;
+    color: #1ca941;
+  }
+  .volverIndex:hover {
+    color: #013810;
+  }
   
   
