@@ -29,7 +29,9 @@
       <div class="calcDiv">
         <div id="datos">
           <div class="textContainer">
-            <img src="assets/img/pngtree-form-line-icon-png-image_9044523.png" />
+            <img
+              src="assets/img/pngtree-form-line-icon-png-image_9044523.png"
+            />
             <h2>Datos Personales</h2>
             <p>
               Antes de empezar, te pedimos que rellenes el siguente formulario
@@ -103,10 +105,7 @@
             </p>
             <form>
               <label for="countrySelect">País:</label>
-              <select id="countrySelect" name="country">
-                <option value="Argentina">Argentina</option>
-                <!-- Add other country options as needed -->
-              </select>
+              <select id="country-select"></select>
             </form>
             <p>
               Los cálculos de la huella de carbono suelen basarse en las
@@ -685,6 +684,9 @@
                 </td>
               </tr>
               <tr>
+                <td colspan="2"><p>&nbsp;</p></td>
+              </tr>
+              <tr>
                 <td colspan="2">
                   <div class="calculoVuelos">
                     <p id="totalFinal">Huella Total: 0.00 Toneladas de CO2</p>
@@ -695,7 +697,9 @@
           </div>
         </div>
       </div>
+      <a class="volverIndex" href="index.html">Volver a la Pagina Principal</a>
     </section>
+    <script src="assets/js/connectContries.js"></script>
     <script src="assets/js/house.js"></script>
     <script src="assets/js/flights.js"></script>
     <script src="assets/js/car.js"></script>
