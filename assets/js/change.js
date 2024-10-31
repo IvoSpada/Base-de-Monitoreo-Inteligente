@@ -89,11 +89,13 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
     totalEmissionsAuto +
     totalEmissionsMoto +
     totalEmissionsViv +
-    (totalEmissionsVuelos / 1000) +
+    totalEmissionsVuelos / 1000 +
     totlaEmissionsBondi;
 
   let element = document.getElementById("totalFinal");
   element.innerHTML = "Huella Total: " + totalFinal + " toneladas de CO2";
+
+  const country = document.getElementById("country-select").value;
 
   document.getElementById("datos").style.display = "none";
   document.getElementById("inicio").style.display = "none";
@@ -103,5 +105,5 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   document.getElementById("moto").style.display = "none";
   document.getElementById("bondi").style.display = "none";
   document.getElementById("resultados").style.display = "block";
-  document.getElementsByClassName("calcDiv")[0].style.height = "350px";
+  document.getElementsByClassName("calcDiv")[0].style.height = "500px";
 });
