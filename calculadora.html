@@ -30,6 +30,7 @@
         <div id="datos">
           <div class="textContainer">
             <img
+              class="logoParts"
               src="assets/img/pngtree-form-line-icon-png-image_9044523.png"
             />
             <h2>Datos Personales</h2>
@@ -84,7 +85,11 @@
         </div>
         <div id="inicio" hidden>
           <div class="textContainer">
-            <img src="assets/img/1011863.png" alt="calcuuuuu" />
+            <img
+              class="logoParts"
+              src="assets/img/1011863.png"
+              alt="calcuuuuu"
+            />
             <h2 class="dumbassIntroText">
               BIM - Calculador de Huella de Carbono
             </h2>
@@ -93,7 +98,8 @@
               TODAS las categorias.
             </h3>
             <p>
-              Selecciona el país en el que vives.
+              Selecciona el país en el que vives, y luego apreta el boton
+              "Guardar".
               <input
                 type="submit"
                 name="pqPais"
@@ -103,9 +109,14 @@
                 onclick="alert('La selección del país nos permite ofrecerte una comparación de tu huella de carbono con la media por persona de tu país y ajustar las unidades de la calculadora. Además, de algunos países tenemos datos más precisos sobre las emisiones derivadas de la generación de electricidad y sobre los precios del gas y la electricidad.')"
               />
             </p>
-            <form>
+            <form
+              href="#toInicio"
+              action="assets/php/footprint.php"
+              method="post"
+            >
               <label for="countrySelect">País:</label>
-              <select id="country-select"></select>
+              <select name="country" id="country-select"></select>
+              <button type="submit" class="paisGuardar">Guardar</button>
             </form>
             <p>
               Los cálculos de la huella de carbono suelen basarse en las
@@ -144,7 +155,11 @@
         </div>
         <div id="vivienda" hidden>
           <div class="textContainer"></div>
-          <img src="assets/img/home-146585_640.webp" alt="casa" />
+          <img
+            class="logoParts"
+            src="assets/img/home-146585_640.webp"
+            alt="casa"
+          />
           <h2>Caluculadora - Vivienda</h2>
           <p class="ViviendaIntro">
             Indica tu cosumo de cada tipo de energia y pulsa el boton 'Calcular'
@@ -253,7 +268,7 @@
               </td>
             </tr>
             <tr>
-              <td><label for="pellets">Pellets de madera:</label></td>
+              <td><label for="pellets">Leña:</label></td>
               <td>
                 <input
                   class="normalForm"
@@ -287,7 +302,11 @@
         </div>
         <div id="vuelos" hidden>
           <div class="textContainer"></div>
-          <img src="assets/img/AEROPLANE.avif" alt="calcuuuuu" />
+          <img
+            class="logoParts"
+            src="assets/img/AEROPLANE.avif"
+            alt="calcuuuuu"
+          />
           <h2 class="dumbassIntroText">Calculadora - Vuelos</h2>
           <p>
             Introduci los datos de todos los vuelos que has tomado en el lapso
@@ -358,7 +377,7 @@
         </div>
         <div id="coche" hidden>
           <div class="textContainer">
-            <img src="assets/img/car.png" alt="calcuuuuu" />
+            <img class="logoParts" src="assets/img/car.png" alt="calcuuuuu" />
             <h2 class="dumbassIntroText">Calculo - Coches</h2>
             <p>
               Introduci los datos de todos los autos que has manejado en el
@@ -439,7 +458,11 @@
         </div>
         <div id="moto" hidden>
           <div class="textContainer">
-            <img src="assets/img/motorcycle.png" alt="calcuuuuu" />
+            <img
+              class="logoParts"
+              src="assets/img/motorcycle.png"
+              alt="calcuuuuu"
+            />
             <h2 class="dumbassIntroText">Calculo - Motos</h2>
             <p>
               Introduci los datos de todas las motocicletas que has manejado en
@@ -499,7 +522,7 @@
         </div>
         <div id="bondi" hidden>
           <div class="textContainer"></div>
-          <img src="assets/img/bus.png" alt="casa" />
+          <img class="logoParts" src="assets/img/bus.png" alt="casa" />
           <h2>Caluculadora - Transporte Publico</h2>
           <p class="ViviendaIntro">
             Indica un estimado de distancia viajado en cada metodo de
@@ -695,10 +718,33 @@
               </tr>
             </table>
           </div>
+          <table class="footShow">
+            <tr>
+              <td>
+                <img
+                  class="footUser"
+                  src="assets/img/FOOTPRINT.png"
+                  alt="huella usuario"
+                />
+              </td>
+              <td>
+                <img
+                  class="footAvg"
+                  src="assets/img/FOOTPRINT.png"
+                  alt="huella per capita"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><p>Tu Huella</p></td>
+              <td><p>Promedio Nacional</p></td>
+            </tr>
+          </table>
         </div>
       </div>
       <a class="volverIndex" href="index.html">Volver a la Pagina Principal</a>
     </section>
+    <script src="assets/js/footprint.js"></script>
     <script src="assets/js/connectContries.js"></script>
     <script src="assets/js/house.js"></script>
     <script src="assets/js/flights.js"></script>
