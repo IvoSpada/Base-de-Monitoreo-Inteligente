@@ -109,7 +109,11 @@
                 onclick="alert('La selección del país nos permite ofrecerte una comparación de tu huella de carbono con la media por persona de tu país y ajustar las unidades de la calculadora. Además, de algunos países tenemos datos más precisos sobre las emisiones derivadas de la generación de electricidad y sobre los precios del gas y la electricidad.')"
               />
             </p>
-            <form action="assets/php/footprint.php" method="post">
+            <form
+              href="#toInicio"
+              action="assets/php/footprint.php"
+              method="post"
+            >
               <label for="countrySelect">País:</label>
               <select name="country" id="country-select"></select>
               <button type="submit" class="paisGuardar">Guardar</button>
