@@ -95,7 +95,19 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   let element = document.getElementById("totalFinal");
   element.innerHTML = "Huella Total: " + totalFinal + " toneladas de CO2";
 
-  const country = document.getElementById("country-select").value;
+  fetch("assets/php/footprint.php")
+    .then((response) => response.json())
+    .then((data) => {
+      let country = data.country; // Get the value of x from the response
+      console.log("country", country); // Use x in your JavaScript
+    })
+    .catch((error) => console.error("Error fetching x:", error));
+
+  /*switch (country) {
+    case 4.2:
+      console.log("hola");
+      break;
+  }*/
 
   document.getElementById("datos").style.display = "none";
   document.getElementById("inicio").style.display = "none";
