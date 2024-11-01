@@ -110,5 +110,5 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   document.getElementById("moto").style.display = "none";
   document.getElementById("bondi").style.display = "none";
   document.getElementById("resultados").style.display = "block";
-  document.getElementsByClassName("calcDiv")[0].style.height = "500px";
+  document.getElementsByClassName("calcDiv")[0].style.height = "300px";
 });
