@@ -95,13 +95,6 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   let element = document.getElementById("totalFinal");
   element.innerHTML = "Huella Total: " + totalFinal + " toneladas de CO2";
 
-  fetch("assets/php/footprint.php")
-    .then((response) => response.json())
-    .then((data) => {
-      let country = data.country; // Get the value of x from the response
-      console.log("country", country); // Use x in your JavaScript
-    })
-    .catch((error) => console.error("Error fetching x:", error));
 
   /*switch (country) {
     case 4.2:
@@ -117,5 +110,5 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   document.getElementById("moto").style.display = "none";
   document.getElementById("bondi").style.display = "none";
   document.getElementById("resultados").style.display = "block";
-  document.getElementsByClassName("calcDiv")[0].style.height = "500px";
+  document.getElementsByClassName("calcDiv")[0].style.height = "300px";
 });
