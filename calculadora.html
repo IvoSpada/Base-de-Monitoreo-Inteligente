@@ -42,8 +42,9 @@
             </p>
             <div>
               <br />
-              <form action="">
+              
                 <table class="form-table">
+                  <form action="assets/php/usuario.php" method="post">
                   <tr>
                     <td><label for="name">Nombre Completo:</label></td>
                     <td><input type="text" name="username" id="username" required/></td>
@@ -67,9 +68,9 @@
                     <td>
                       <legend>
                         <label for="compYes">Si</label>
-                        <input type="radio" name="compensation" id="compYes" />
+                        <input type="radio" name="compensation" id="compYes" value="true"/>
                         <label for="compNo">No</label>
-                        <input type="radio" name="compensation" id="compNo" />
+                        <input type="radio" name="compensation" id="compNo" value="false"/>
                       </legend>
                     </td>
                   </tr>
@@ -80,21 +81,19 @@
                     <td>
                       <legend>
                         <label for="estYes">Si</label>
-                        <input type="radio" name="estudiante" id="compYes" />
+                        <input type="radio" name="estudiante" id="compYes" value="true"/>
                         <label for="estNo">No</label>
-                        <input type="radio" name="estudiante" id="compNo" />
+                        <input type="radio" name="estudiante" id="compNo" value="false"/>
                       </legend>
                     </td>
                   </tr>
                   <tr>
                 <td colspan="2">
-                  <button class="calculate-button" type="button">
-                    Guardar Datos
-                  </button>
+                  <input class="buttonInfo" type="submit" value="Guardar">
                 </td>
               </tr>
-                </table>
               </form>
+                </table>
             </div>
           </div>
         </div>
@@ -113,9 +112,9 @@
               TODAS las categorias.
             </h3>
             <p>
-              Selecciona el país en el que vives, y luego apreta el boton
-              "Guardar".
-              <input
+              Selecciona el país en el que vives.
+
+              <!--<input
                 type="submit"
                 name="pqPais"
                 id="pqPais"
@@ -123,11 +122,12 @@
                 class="pqPais"
                 onclick="alert('La selección del país nos permite ofrecerte una comparación de tu huella de carbono con la media por persona de tu país y ajustar las unidades de la calculadora. Además, de algunos países tenemos datos más precisos sobre las emisiones derivadas de la generación de electricidad y sobre los precios del gas y la electricidad.')"
               />
+              -->
             </p>
             <div class="center">
               <label for="countrySelect">País:</label>
               <select name="country" id="country-select"></select>
-              <button type="submit" class="paisGuardar">Guardar</button>
+              <!-- <button type="submit" class="paisGuardar">Guardar</button> -->
               </div>
             <p>
               Los cálculos de la huella de carbono suelen basarse en las
