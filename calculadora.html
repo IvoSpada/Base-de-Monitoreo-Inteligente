@@ -46,6 +46,7 @@
                 <table class="form-table">
                   <tr>
                     <td><label for="name">Nombre Completo:</label></td>
+
                     <td><input type="text" name="username" id="username" required/></td>
                   </tr>
                   <tr>
@@ -86,6 +87,7 @@
                       </legend>
                     </td>
                   </tr>
+
                   <tr>
                 <td colspan="2">
                   <button class="calculate-button" type="button">
@@ -93,6 +95,8 @@
                   </button>
                 </td>
               </tr>
+
+
                 </table>
               </form>
             </div>
@@ -124,23 +128,31 @@
                 onclick="alert('La selección del país nos permite ofrecerte una comparación de tu huella de carbono con la media por persona de tu país y ajustar las unidades de la calculadora. Además, de algunos países tenemos datos más precisos sobre las emisiones derivadas de la generación de electricidad y sobre los precios del gas y la electricidad.')"
               />
             </p>
+
             <div class="center">
               <label for="countrySelect">País:</label>
               <select name="country" id="country-select"></select>
               <button type="submit" class="paisGuardar">Guardar</button>
-              </div>
+            </div>
+
+     
+
             <p>
               Los cálculos de la huella de carbono suelen basarse en las
               emisiones de los 12 últimos meses. Introduce el período que
               abarcará el cálculo:
             </p>
+
             <div class="center"> 
               <label for="startDate">desde</label>
               <input type="date" id="startDate" name="startDate" />
               <label for="endDate">hasta</label>
               <input type="date" id="endDate" name="endDate" />
               <button type="submit" class="fechaGuardar">Guardar</button>
-              </div>
+            </div>
+
+           
+
             <p>
               A continuación, selecciona la pestaña apropiada de la parte
               superior para calcular la huella del aspecto de tu estilo de vida
@@ -743,7 +755,9 @@
               </tr>
             </table>
           </div>
+
           <!--
+
           <table class="footShow">
             <tr>
               <td>
