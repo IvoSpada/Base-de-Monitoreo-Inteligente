@@ -268,3 +268,52 @@ li {
 .footAvg {
   height: 200px;
 }
+
+/*-----------------------
+-------RESPONSIVE--------
+------------------------*/
+h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+.calcSection,
+.tablesCenter {
+  max-width: 100%;
+  padding: 0 1.5em;
+}
+.calculate-button,
+.nextButton {
+  width: 100%; /* Cambia a 100% para pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+  .nextButton {
+    font-size: 1em;
+    width: 100%;
+    height: auto;
+  }
+}
+.form-table,
+.footShow {
+  width: 100%;
+  margin: 10px;
+}
+
+@media (max-width: 480px) {
+  .form-table,
+  .footShow td {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
