@@ -17,16 +17,15 @@ if ($conn->connect_error) {
 $sql = "SELECT footprint FROM country where name = '$country'";
 $result = $conn->query($sql);
 
-$data = array();
+$data = '';
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $data[] = $row['footprint'];
-    }
+    $row = $result->fetch_assoc(); // Fetch the result
+        $data = $row['footprint'];
 }
 
-json_encode(['country' => $data]);
-header("Location: http://bim/calculadora.html");
+echo json_encode($data);
+// header("Location: http://bim/calculadora.html");
 
 
 $conn->close();
