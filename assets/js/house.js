@@ -21,13 +21,12 @@ function calculateHouseEmissions() {
     parseFloat(document.getElementById("electricidad").value) || 0;
 
   const electricityFactor = 0.2881; // kgCO2e/kWh
-  // factors (example values, REPLACE WITH ACCURATE ONES)
-  const gasNaturalFactor = 0.2;
-  const gasoleoFactor = 2.68;
-  const carbonFactor = 2.42;
-  const glpFactor = 1.51;
-  const propanoFactor = 1.54;
-  const pelletsFactor = 0.07;
+  const gasNaturalFactor = 0.2; // CO₂e/kWh
+  const gasoleoFactor = 2.68; // CO₂e/litro
+  const carbonFactor = 2650; // CO₂e/tonelada
+  const glpFactor = 1.66; // CO₂e/litro
+  const propanoFactor = 1.63; // CO₂e/litro
+  const pelletsFactor = 25; // CO₂e/tonelada
 
   let totalEmissions =
     electricity * electricityFactor +

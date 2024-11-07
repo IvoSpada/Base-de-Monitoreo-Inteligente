@@ -1,3 +1,4 @@
+let FK = 0;
 document.getElementById("toDatos").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("datos").style.display = "block";
@@ -85,22 +86,12 @@ document.getElementById("toBondi").addEventListener("click", function (e) {
 document.getElementById("toResultados").addEventListener("click", function (e) {
   e.preventDefault();
   let totalFinal = 0;
-  totalFinal =
-    totalEmissionsAuto +
-    totalEmissionsMoto +
-    totalEmissionsViv +
-    totalEmissionsVuelos / 1000 +
-    totlaEmissionsBondi;
+
+  totalFinal = totalEmissionsAuto + totalEmissionsMoto + totalEmissionsViv + totalEmissionsVuelos / 1000 + totlaEmissionsBondi;
+  sendToDatabase();
 
   let element = document.getElementById("totalFinal");
   element.innerHTML = "Huella Total: " + totalFinal + " toneladas de CO2";
-
-
-  /*switch (country) {
-    case 4.2:
-      console.log("hola");
-      break;
-  }*/
 
   document.getElementById("datos").style.display = "none";
   document.getElementById("inicio").style.display = "none";
@@ -111,4 +102,38 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
   document.getElementById("bondi").style.display = "none";
   document.getElementById("resultados").style.display = "block";
   document.getElementsByClassName("calcDiv")[0].style.height = "300px";
+
+
 });
+
+function sendToDatabase() {
+FK = FK + 1;
+
+const emissionsData = {
+  totalEmissionsAuto: totalEmissionsAuto,
+  totalEmissionsMoto: totalEmissionsMoto,
+  totalEmissionsViv: totalEmissionsViv,
+  totalEmissionsVuelos: totalEmissionsVuelos,
+  totalEmissionsBondi: totlaEmissionsBondi,
+  foreignKey: FK
+};
+
+fetch('assets/php/saveFootprint.php', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(emissionsData)
+})
+.then(response => {
+  return response.text();  // Obtener la respuesta como texto
+})
+.then(text => {
+  console.log('Respuesta del servidor:', text); // Ver qué está devolviendo el servidor
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
+
+}

@@ -17,8 +17,8 @@ function calculateCarEmissions() {
   // Example emission factors (REPLACE WITH ACCURATE ONES)
   const fuelFactors = {
     gas: 0.2,
-    diesel: 0.25,
-    glp: 0.15,
+    diesel: 0.27,
+    glp: 0.17,
     cng: 0.18,
   };
 

@@ -42,12 +42,17 @@
             </p>
             <div>
               <br />
-              <form action="">
+              
                 <table class="form-table">
+                  <form id="formulario" action="assets/php/usuario.php" method="post">
                   <tr>
                     <td><label for="name">Nombre Completo:</label></td>
 
                     <td><input type="text" name="username" id="username" required/></td>
+                  </tr>
+                  <tr>
+                    <td><label for="age">Edad:</label></td>
+                    <td><input type="number" name="edad" id="edad" required /></td>
                   </tr>
                   <tr>
                     <td><label for="email">Email:</label></td>
@@ -61,6 +66,21 @@
                   </tr>
                   <tr>
                     <td>
+                      <label for="genero">Genero:</label>
+                    </td>
+                    <td>
+                      <legend>
+                        <label for="generoMasc">Hombre</label>
+                        <input type="radio" name="genero" id="generoMasc" value="Hombre"/>
+                        <label for="generoFem">Mujer</label>
+                        <input type="radio" name="genero" id="generoFem" value="Mujer"/>
+                        <label for="generoNon">No-Binario</label>
+                        <input type="radio" name="genero" id="generoNon" value="No-Binario">
+                      </legend>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
                       <label for="compensasionYesNo"
                         >Estas dispuest@ a compensar tu huella?
                       </label>
@@ -68,9 +88,9 @@
                     <td>
                       <legend>
                         <label for="compYes">Si</label>
-                        <input type="radio" name="compensation" id="compYes" />
+                        <input type="radio" name="compensation" id="compYes" value="1"/>
                         <label for="compNo">No</label>
-                        <input type="radio" name="compensation" id="compNo" />
+                        <input type="radio" name="compensation" id="compNo" value="0"/>
                       </legend>
                     </td>
                   </tr>
@@ -81,24 +101,27 @@
                     <td>
                       <legend>
                         <label for="estYes">Si</label>
-                        <input type="radio" name="estudiante" id="compYes" />
+                        <input type="radio" name="estudiante" id="compYes" value="1"/>
                         <label for="estNo">No</label>
-                        <input type="radio" name="estudiante" id="compNo" />
+                        <input type="radio" name="estudiante" id="compNo" value="0"/>
                       </legend>
                     </td>
                   </tr>
 
                   <tr>
                 <td colspan="2">
-                  <button class="calculate-button" type="button">
-                    Guardar Datos
-                  </button>
+                  <input class="calculate-button" type="submit" value="Guardar">
                 </td>
               </tr>
-
-
                 </table>
+
               </form>
+              <tr>
+                <td colspan="2">
+                  <div id="resultadoUser"></div>
+                </td>
+              </tr>
+                </table>
             </div>
           </div>
         </div>
@@ -117,9 +140,9 @@
               TODAS las categorias.
             </h3>
             <p>
-              Selecciona el país en el que vives, y luego apreta el boton
-              "Guardar".
-              <input
+              Selecciona el país en el que vives.
+
+              <!--<input
                 type="submit"
                 name="pqPais"
                 id="pqPais"
@@ -127,15 +150,12 @@
                 class="pqPais"
                 onclick="alert('La selección del país nos permite ofrecerte una comparación de tu huella de carbono con la media por persona de tu país y ajustar las unidades de la calculadora. Además, de algunos países tenemos datos más precisos sobre las emisiones derivadas de la generación de electricidad y sobre los precios del gas y la electricidad.')"
               />
+              -->
             </p>
 
             <div class="center">
               <label for="countrySelect">País:</label>
               <select name="country" id="country-select"></select>
-              <button type="submit" class="paisGuardar">Guardar</button>
-            </div>
-
-     
 
             <p>
               Los cálculos de la huella de carbono suelen basarse en las
@@ -148,10 +168,6 @@
               <input type="date" id="startDate" name="startDate" />
               <label for="endDate">hasta</label>
               <input type="date" id="endDate" name="endDate" />
-              <button type="submit" class="fechaGuardar">Guardar</button>
-            </div>
-
-           
 
             <p>
               A continuación, selecciona la pestaña apropiada de la parte
@@ -523,9 +539,6 @@
                     />
                     <label for="etc">Cc</label>
                   </td>
-                  <td>
-                    <p>hh</p>
-                  </td>
                 </tr>
                 <tr>
                   <td colspan="2">
@@ -789,6 +802,7 @@
       </div>
       <a class="volverIndex" href="index.html">Volver a la Pagina Principal</a>
     </section>
+    <script src="assets/js/userToDatabase.js"></script>
     <script src="assets/js/footprint.js"></script>
     <script src="assets/js/connectContries.js"></script>
     <script src="assets/js/house.js"></script>
