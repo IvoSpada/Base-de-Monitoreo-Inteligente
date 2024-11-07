@@ -13,8 +13,8 @@ function calculateMotorcycleEmissions() {
   // console.log(kilometraje); // debug
 
   // Example emission factors (REPLACE WITH ACCURATE ONES)
-  const baseEmissionFactor = 0.15; // kgCO2e per km
-  const displacementFactor = 0.0005; // Additional factor based on engine size
+  const baseEmissionFactor = 0.12; // kgCO2e per km
+  const displacementFactor = 0.0006; // Additional factor based on engine size
 
   let EmissionsMoto =
     kilometraje * baseEmissionFactor + cilindrada * displacementFactor;
