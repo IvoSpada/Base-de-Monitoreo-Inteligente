@@ -107,7 +107,7 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
 });
 
 function sendToDatabase() {
-// FK = FK + 1;
+
 
 const emissionsData = {
   totalEmissionsAuto: totalEmissionsAuto,
@@ -134,6 +134,22 @@ fetch('assets/php/saveFootprint.php', {
 .catch(error => {
   console.error('Error:', error);
 });
-
-
 }
+
+async function obtenerUltimoValorFK() {
+    try {
+        // Actualiza la ruta al archivo PHP según la ubicación correcta en tu servidor
+        const response = await fetch('http://bim.com/assets/php/obtenerUltimoFK.php');
+        const data = await response.json();
+
+        if (data.error) {
+            console.error('Error en la consulta:', data.error);
+        } else {
+            console.log('Último valor de FK:', data.fk_columna);
+        }
+    } catch (error) {
+        console.error('Error al obtener el valor de la FK:', error);
+    }
+}
+setInterval(obtenerUltimoValorFK, 5000);
+console.log(data.fk_columna);

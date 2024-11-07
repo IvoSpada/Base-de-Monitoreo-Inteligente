@@ -42,7 +42,4 @@ else {
     echo json_encode(['status' => 'error', 'message' => 'Datos no válidos']);
 }
 
-
-
-
 ?>
