@@ -1,23 +1,23 @@
 <?php
 if (isset($_POST["username"])) {
-    $username = trim($_POST["username"]);
+    $fullName = trim($_POST["username"]);
+    $edad = trim($_POST["edad"]);
     $email = trim($_POST["email"]);
     $telefono = trim($_POST["telefono"]);
+    $gender = $_POST["genero"];
     $huellaSiNo = $_POST["compensation"];
     $estudianteSiNo = $_POST["estudiante"];
 
-    echo $huellaSiNo;
-    echo $estudianteSiNo;
-}
-   /* $servername = "localhost";
-    $DBUser = "root";
-    $DBPass = "";
-    $DBname = "registros";
+    
+    $huellaSiNo = (int)$huellaSiNo;
+    $edad = (int)$edad;
+    $estudianteSiNo = (int)$estudianteSiNo;
+
 
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'usuario';
+    $dbName = 'users';
 
     $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
@@ -25,10 +25,16 @@ if (isset($_POST["username"])) {
         die("Connection failed: " . $conn->connect_error);
     }
     else {
-        $sql = "INSERT INTO 'user' (`nombre`, `email`, `telefono`, `huella?`, `estudiante?`) VALUES ()"
+        $sql = ("INSERT INTO usuario (nombre, email, telefono, compensar, estudiante, genero, edad) VALUES ('$fullName', '$email', '$telefono', $huellaSiNo, $estudianteSiNo, '$gender', $edad);");
         $result = $conn->query($sql);
     }
 
+    if ($result) {
+        echo "<h2>Datos Guardados exitosamente.</h2>";
+    } else {
+        echo "<h2>Error al guardar los datos: " . $conn->error . "</h2>";
+    }
+
     
-}*/
+}
 ?>

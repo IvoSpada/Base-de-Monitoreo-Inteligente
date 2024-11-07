@@ -44,10 +44,14 @@
               <br />
               
                 <table class="form-table">
-                  <form action="assets/php/usuario.php" method="post">
+                  <form id="formulario" action="assets/php/usuario.php" method="post">
                   <tr>
                     <td><label for="name">Nombre Completo:</label></td>
                     <td><input type="text" name="username" id="username" required/></td>
+                  </tr>
+                  <tr>
+                    <td><label for="age">Edad:</label></td>
+                    <td><input type="number" name="edad" id="edad" required /></td>
                   </tr>
                   <tr>
                     <td><label for="email">Email:</label></td>
@@ -61,6 +65,21 @@
                   </tr>
                   <tr>
                     <td>
+                      <label for="genero">Genero:</label>
+                    </td>
+                    <td>
+                      <legend>
+                        <label for="generoMasc">Hombre</label>
+                        <input type="radio" name="genero" id="generoMasc" value="Hombre"/>
+                        <label for="generoFem">Mujer</label>
+                        <input type="radio" name="genero" id="generoFem" value="Mujer"/>
+                        <label for="generoNon">No-Binario</label>
+                        <input type="radio" name="genero" id="generoNon" value="No-Binario">
+                      </legend>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
                       <label for="compensasionYesNo"
                         >Estas dispuest@ a compensar tu huella?
                       </label>
@@ -68,9 +87,9 @@
                     <td>
                       <legend>
                         <label for="compYes">Si</label>
-                        <input type="radio" name="compensation" id="compYes" value="true"/>
+                        <input type="radio" name="compensation" id="compYes" value="1"/>
                         <label for="compNo">No</label>
-                        <input type="radio" name="compensation" id="compNo" value="false"/>
+                        <input type="radio" name="compensation" id="compNo" value="0"/>
                       </legend>
                     </td>
                   </tr>
@@ -81,9 +100,9 @@
                     <td>
                       <legend>
                         <label for="estYes">Si</label>
-                        <input type="radio" name="estudiante" id="compYes" value="true"/>
+                        <input type="radio" name="estudiante" id="compYes" value="1"/>
                         <label for="estNo">No</label>
-                        <input type="radio" name="estudiante" id="compNo" value="false"/>
+                        <input type="radio" name="estudiante" id="compNo" value="0"/>
                       </legend>
                     </td>
                   </tr>
@@ -93,6 +112,11 @@
                 </td>
               </tr>
               </form>
+              <tr>
+                <td colspan="2">
+                  <div id="resultadoUser"></div>
+                </td>
+              </tr>
                 </table>
             </div>
           </div>
@@ -775,6 +799,7 @@
       </div>
       <a class="volverIndex" href="index.html">Volver a la Pagina Principal</a>
     </section>
+    <script src="assets/js/userToDatabase.js"></script>
     <script src="assets/js/footprint.js"></script>
     <script src="assets/js/connectContries.js"></script>
     <script src="assets/js/house.js"></script>
