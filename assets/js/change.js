@@ -107,7 +107,7 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
 });
 
 function sendToDatabase() {
-FK = FK + 1;
+// FK = FK + 1;
 
 const emissionsData = {
   totalEmissionsAuto: totalEmissionsAuto,
