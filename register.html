@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/login-styles.css" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <div class="logindb registerdb">
+      <img class="avatar" src="/assets/img/descarga.jpg" alt="logo" />
+      <h1>Register Here</h1>
+      <form action="/assets/php/registro.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Usuario" name="Usuario" />
+        <label for="username">Apellido</label>
+        <input type="text" placeholder="Apellido" name="Apellido" />
+        <label for="username">Password</label>
+        <input type="text" placeholder="Contraseña" name="Contraseña" />
+        <label for="mail">Email</label>
+        <input type="text" name="mail" placeholder="Email" />
+
+        <input type="submit" value="Registrarse" name="btnreg" />
+      </form>
+      <a href="index.html">Volver a inicio</a>
+    </div>
+  </body>
+</html>

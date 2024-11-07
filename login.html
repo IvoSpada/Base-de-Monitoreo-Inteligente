@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/login-styles.css" />
+    <title>Inicio Sesión</title>
+  </head>
+  <body>
+    <div class="logindb">
+      <img class="avatar" src="/assets/img/images.png" alt="logo" />
+      <h1>Login Here</h1>
+      <form action="/assets/php/logear.php" method="post">
+        <label for="mail">Email</label>
+        <input
+          type="text"
+          placeholder="Ingrese su correo electronico"
+          name="mail"
+        />
+        <label for="username">Contraseña</label>
+        <input
+          type="text"
+          placeholder="Ingrese su contraseña"
+          name="ContraseñaL"
+        />
+
+        <input type="submit" value="Logearse" name="btnlog" />
+      </form>
+
+      <a href="register.html">No tiene cuenta? Registrese aquí</a>
+    </div>
+  </body>
+</html>
