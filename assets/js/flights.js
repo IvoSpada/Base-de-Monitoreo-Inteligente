@@ -17,12 +17,11 @@ function calculateFlightEmissions() {
   //console.log(flightClass); // debugs
   //console.log(numberOfFlights);
 
-  // Example emission factors (REPLACE WITH ACCURATE ONES)
-  const baseEmissionFactor = 0.1; // kgCO2e per km
+  const baseEmissionFactor = 0.09; // kg CO₂e/km (se divide luego)
   const classFactors = {
     economy: 1,
-    business: 1.5,
-    firstClass: 2,
+    business: 1.54, // 54% more than economy
+    firstClass: 2.4, // roughly 140% more than economy 
   };
 
   // console.log(classFactors[flightClass]); // debug

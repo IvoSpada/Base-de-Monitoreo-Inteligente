@@ -16,7 +16,7 @@ function calculatePublicTransportEmissions() {
         interTren: 0.03,
         tranvia: 0.02,
         metro: 0.03,
-        taxi: 0.15
+        taxi: 0.16
     };
 
     console.log(convertedValues);
