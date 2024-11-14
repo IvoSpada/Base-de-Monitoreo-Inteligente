@@ -24,7 +24,7 @@ if ($data) {
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'users';
+    $dbName = 'formulario';
 
     $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
