@@ -16,6 +16,10 @@ async function obtenerUltimoValorFK() {
         console.log(ultimoValorFK);
         const contadorElement = document.getElementById('contadorUsuarios');
         contadorElement.textContent = `Huellas calculadas: ${ultimoValorFK}`;
+        
+        // Agregamos la clase 'titulo__bim' al elemento
+        contadorElement.classList.add('titulo__bim');
+        
     } catch (error) {
         console.error('Error al obtener el valor de la FK:', error);
     }
