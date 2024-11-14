@@ -28,11 +28,13 @@
   --gris: #e1e1e1;
   --eco_green: #45cf63;
   --creme: #f8f4ec;
+  --cremelight: #f7f5f1;
 }
 html {
     font-size: 62.5%;
 }
 body {
+  background-color: var(--cremelight);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -493,6 +495,7 @@ li {
   font-size: 2.31415rem;
   color: white;
   white-space: nowrap;
+  font-family: var(--fuenteParrafos);
 }
 
 .navegacion__enlace:hover {
@@ -500,6 +503,7 @@ li {
   color: black;
 }
 .footer {
+  border: 1px solid var(--primario);
   background-color: var(--creme);
   padding: 2rem 1rem;
   text-align: center;
@@ -530,6 +534,7 @@ li {
 }
 .footer__text {
   font-size: 1.4rem;
+  font-family: var(--fuenteParrafos);
 }
 /* General styles for the navigation bar */
 .calcNavBar {
