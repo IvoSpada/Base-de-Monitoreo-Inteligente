@@ -3,7 +3,7 @@
 
 // Configura tu conexión a la base de datos
 $host = 'localhost';
-$dbname = 'users';
+$dbname = 'formulario';
 $username = 'root';
 $password = '';
 

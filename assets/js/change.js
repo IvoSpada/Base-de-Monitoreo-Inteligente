@@ -1,4 +1,5 @@
 let FK = 0;
+let check = 0;
 document.getElementById("toDatos").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("datos").style.display = "block";
@@ -107,7 +108,7 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
 });
 
 function sendToDatabase() {
-
+check++;
 
 const emissionsData = {
   totalEmissionsAuto: totalEmissionsAuto,
@@ -115,7 +116,7 @@ const emissionsData = {
   totalEmissionsViv: totalEmissionsViv,
   totalEmissionsVuelos: totalEmissionsVuelos,
   totalEmissionsBondi: totlaEmissionsBondi,
-  foreignKey: FK
+  check: check
 };
 
 fetch('assets/php/saveFootprint.php', {

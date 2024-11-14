@@ -6,7 +6,8 @@ $totalEmissionsMoto = $data['totalEmissionsMoto'];
 $totalEmissionsViv = $data['totalEmissionsViv']; // NOT IN TONS
 $totalEmissionsVuelos = $data['totalEmissionsVuelos'];
 $totalEmissionsBondi = $data['totalEmissionsBondi'];
-$FK = $data['foreignKey'];
+$check = $data['foreignKey'];
+$FK = 0;
 
 $totalEmissionsViv = $totalEmissionsViv / 1000; // in tons :)
 
@@ -18,7 +19,6 @@ header('Content-Type: application/json');
 // Leer los datos enviados por el cliente
 $data = json_decode(file_get_contents("php://input"), true);
 
-// Verificar si los datos se han recibido correctamente
 if ($data) {
     // database process
     $dbHost = 'localhost';
@@ -32,9 +32,26 @@ if ($data) {
         die("Connection failed: " . $conn->connect_error);
     }
     else {
-        $FK += 1;
-        $sql = ("INSERT INTO footprint (id_user, vivienda, vuelos, coches, moto, bondi, total) VALUES ($FK, $totalEmissionsViv, $totalEmissionsVuelos, $totalEmissionsAuto, $totalEmissionsMoto, $totalEmissionsBondi, $total);");
-        $result = $conn->query($sql);
+        $select = ("SELECT MAX(id) FROM usuario;");
+        $result = $conn->query($select);
+        if ($result && $row = $result->fetch_row()) {
+            $FK = (int) $row[0];
+        } else {
+            $FK = null;
+        }
+
+        $select = ("SELECT MAX(id_user) FROM footprint;");
+        $result = $conn->query($select);
+        if ($result && $row = $result->fetch_row()) {
+            $check = (int) $row[0];
+        } else {
+            $check = null;
+        }
+        if ($FK != $check) {
+            $sql = ("INSERT INTO footprint (id_user, vivienda, vuelos, coches, moto, bondi, total) VALUES ($FK, $totalEmissionsViv, $totalEmissionsVuelos, $totalEmissionsAuto, $totalEmissionsMoto, $totalEmissionsBondi, $total);");
+            $result = $conn->query($sql);
+        }
+        
     }
 } 
 else {
