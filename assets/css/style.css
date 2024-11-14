@@ -21,6 +21,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     /* 1rem = 10px */
+    scroll-snap-type: y mandatory;
 }
 
 *,
@@ -441,6 +442,20 @@ h4 {
     animation-delay: 4s;
 }
 
+#contadorUsuarios:nth-child(1) {
+    animation: cambio-color 8s infinite;
+}
+
+#contadorUsuarios:nth-child(2) {
+    animation: cambio-color 8s infinite;
+    animation-delay: 2s;
+}
+
+#contadorUsuarios:nth-child(3) {
+    animation: cambio-color 8s infinite;
+    animation-delay: 4s;
+}
+
 @keyframes cambio-color {
     0% {
         color: #000;
@@ -713,4 +728,9 @@ h4 {
     .footer__text {
         font-size: 1rem;
     }
+}
+
+.contenedor, .footer, .header {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }

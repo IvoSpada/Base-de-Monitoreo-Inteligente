@@ -1,4 +1,5 @@
 let FK = 0;
+let check = 0;
 document.getElementById("toDatos").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("datos").style.display = "block";
@@ -106,8 +107,36 @@ document.getElementById("toResultados").addEventListener("click", function (e) {
 
 });
 
-function sendToDatabase() {
+function sendMail() {
+  fetch("assets/php/sendMail.php")
+        .then(response => {
+            if (response.ok) {
+                console.log("PHP file accessed successfully!");
+            } else {
+                console.error("Error accessing PHP file.");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+  /*fetch('assets/php/sendMail.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    // body: JSON.stringify(emissionsData)
+  })
+  .then(response => {
+    return response.text();  // Obtener la respuesta como texto
+  })
+  .then(text => {
+    console.log('Respuesta del servidor:', text); // Ver qué está devolviendo el servidor
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });*/
+}
 
+function sendToDatabase() {
+check++;
 
 const emissionsData = {
   totalEmissionsAuto: totalEmissionsAuto,
@@ -115,7 +144,7 @@ const emissionsData = {
   totalEmissionsViv: totalEmissionsViv,
   totalEmissionsVuelos: totalEmissionsVuelos,
   totalEmissionsBondi: totlaEmissionsBondi,
-  foreignKey: FK
+  check: check
 };
 
 fetch('assets/php/saveFootprint.php', {
