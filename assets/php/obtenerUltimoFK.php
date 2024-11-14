@@ -3,7 +3,7 @@
 
 // Configura tu conexión a la base de datos
 $host = 'localhost';
-$dbname = 'users';
+$dbname = 'formulario';
 $username = 'root';
 $password = '';
 
@@ -13,7 +13,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Consulta para obtener el último valor de la columna FK
-    $query = "SELECT id FROM usuario ORDER BY id DESC LIMIT 1";
+    $query = "SELECT id_huella FROM footprint ORDER BY id_huella DESC LIMIT 1";
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
