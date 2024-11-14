@@ -1,15 +1,18 @@
 @font-face {
-  font-family: freaky;
-  src: url(../fuentes/papyrus.ttf);
+    font-family: freaky;
+    src: url(../fuentes/papyrus.ttf);
 }
+
 @font-face {
-  font-family: Aneliza;
-  src: url(../fuentes/Aneliza-Regular.ttf);
+    font-family: Aneliza;
+    src: url(../fuentes/Aneliza-Regular.ttf);
 }
+
 @font-face {
-  font-family: AnelizaBold;
-  src: url(../fuentes/Aneliza-Bold.ttf);
+    font-family: AnelizaBold;
+    src: url(../fuentes/Aneliza-Bold.ttf);
 }
+<<<<<<< HEAD
 :root {
   --fuenteHeading: "PT sans", sans-serif;
   --fuenteParrafos: "Open Sans", sans-serif;
@@ -21,278 +24,350 @@
   --eco_green: #45cf63;
   --creme: #f8f4ec;
 }
+=======
+
+>>>>>>> 795fec571809d64ccbba44d996a5ddf7d71825f7
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
+<<<<<<< HEAD
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+=======
+
+>>>>>>> 795fec571809d64ccbba44d996a5ddf7d71825f7
 * {
-  padding: 0rem;
-  margin: 0rem;
+    padding: 0rem;
+    margin: 0rem;
 }
+
 h1 {
-  text-align: center;
-  font-size: 25px;
-  color: #1ca941;
+    text-align: center;
+    font-size: 25px;
+    color: #1ca941;
 }
+
 #totalFinal {
-  text-align: center;
-  font-size: 19.5px;
-  color: #1ca941;
+    text-align: center;
+    font-size: 19.5px;
+    color: #1ca941;
 }
+
 .calcNavBar {
-  display: inline;
-  font-size: 1.5em;
+    display: inline;
+    font-size: 1.5em;
 }
+
 .calcSection {
+<<<<<<< HEAD
   min-height: min-content;
   width: auto;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+=======
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> 795fec571809d64ccbba44d996a5ddf7d71825f7
 }
+
 .tablesCenter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .calcDiv {
+<<<<<<< HEAD
   min-height: min-content;
   justify-content: left;
   border: 1px solid mediumseagreen;
   width: 80%;
   height: 350px;
   margin-bottom: 15px;
+=======
+    justify-content: left;
+    border: 1px solid mediumseagreen;
+    width: 80%;
+    height: 350px;
+    margin-bottom: 15px;
+>>>>>>> 795fec571809d64ccbba44d996a5ddf7d71825f7
 }
+
 .logoParts {
-  width: 75px;
-  height: 75px;
-  padding: 10px;
-  float: left;
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    float: left;
 }
+
 .textContainer {
-  margin-left: 10px;
+    margin-left: 10px;
 }
+
 .calcSection h2 {
-  font-size: 2em;
-  color: seagreen;
-  font-family: AnelizaBold;
-  margin: 0;
+    font-size: 2em;
+    color: seagreen;
+    font-family: AnelizaBold;
+    margin: 0;
 }
+
 .dumbassIntroText {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
+
 .calcSection p {
-  margin-top: 10px;
-  font-size: 1.25em;
-  text-align: left;
-  color: black;
+    margin-top: 10px;
+    font-size: 1.25em;
+    text-align: left;
+    color: black;
 }
+
 .calcSection form {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.25;
-  margin: 1.75em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25;
+    margin: 1.75em;
 }
+
 h1 div {
-  font-family: freaky;
-  font-size: 25px;
-  float: left;
+    font-family: freaky;
+    font-size: 25px;
+    float: left;
 }
+
 .pqPais {
-  border: 0px;
-  background-color: Transparent;
-  color: #1ca941;
-  font-size: 1em;
-  border-width: 0;
-  padding: 0;
-  margin: 0;
-  text-decoration: underline;
+    border: 0px;
+    background-color: Transparent;
+    color: #1ca941;
+    font-size: 1em;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
 }
+
 .freaky {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
+
 .calcSection select,
 .calcSection input[type="date"],
 .calcSection button {
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
+
 .fechaGuardar {
-  background-color: green;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
 }
+
 .fechaGuardar:hover {
-  background-color: darkgreen;
+    background-color: darkgreen;
 }
+
 .nextButton {
-  font-size: 15px;
-  display: block;
-  text-align: center;
-  padding-top: 0.2em;
-  margin-right: 1em;
-  margin-top: 2.5em;
-  background-color: green;
-  color: white;
-  width: 13em;
-  height: 1em;
-  float: right;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    padding-top: 0.2em;
+    margin-right: 1em;
+    margin-top: 2.5em;
+    background-color: green;
+    color: white;
+    width: 13em;
+    height: 1em;
+    float: right;
 }
+
 .nextButton:hover {
-  background-color: darkgreen;
+    background-color: darkgreen;
 }
+
 #countrySelect {
-  width: 25em;
-  height: 1.5em;
-  text-align: left;
+    width: 25em;
+    height: 1.5em;
+    text-align: left;
 }
+
 #inicio {
-  display: none;
+    display: none;
 }
+
 #vivienda {
-  display: none;
+    display: none;
 }
+
 #vuelos {
-  display: none;
+    display: none;
 }
+
 #coche {
-  display: none;
+    display: none;
 }
+
 #moto {
-  display: none;
+    display: none;
 }
+
 #bondi {
-  display: none;
+    display: none;
 }
+
 #resultados {
-  display: none;
+    display: none;
 }
+
 #cantDePersonas {
-  width: 1.5em;
+    width: 1.5em;
 }
+
 h3 {
-  margin-top: 7.5px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: bolder;
+    margin-top: 7.5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bolder;
 }
+
 .form-table {
-  width: 350px;
-  border-collapse: collapse;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+    width: 350px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .form-table td {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
+
 .normalForm {
-  width: 90px;
-  margin: 0;
-  padding: 3px;
-  border: 1px solid black;
-  border-radius: 3px;
+    width: 90px;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 3px;
 }
+
 .normalSelect {
-  width: 100px;
-  margin: 0;
-  padding: 3px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+    width: 100px;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
+
 .electricity {
-  width: 50px;
-  margin: 0;
-  padding: 3px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+    width: 50px;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
+
 #factor {
-  font-size: 10px;
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
 .calculate-button {
-  padding: 10px;
-  background-color: green;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-  width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
 }
+
 .calculoViv {
-  text-align: center;
-  padding: 5px;
-  border: 1px solid green;
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid green;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .calculoVuelos {
-  text-align: center;
-  padding: 5px;
-  border: 1px solid green;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid green;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 li {
-  margin-right: 5px;
-  margin-top: 10px;
-  font-size: 1.25em;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 1.25em;
 }
+
 .volverIndex {
-  font-size: 20px;
-  color: #1ca941;
+    font-size: 20px;
+    color: #1ca941;
 }
+
 .volverIndex:hover {
-  color: #013810;
+    color: #013810;
 }
+
 .footShow {
-  width: 350px;
-  border: 2px solid black;
-  border-collapse: collapse;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  margin-left: auto;
-  margin-right: auto;
+    width: 350px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .footShow td {
-  border-collapse: collapse;
-  border: 1px solid black;
-  display: flexbox;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    display: flexbox;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .footUser {
-  height: 200px;
+    height: 200px;
 }
+
 .footAvg {
-  height: 200px;
+    height: 200px;
 }
+
 .center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .buttonInfo {
+<<<<<<< HEAD
   margin-left: auto;
   margin-right: auto;
 }
@@ -454,4 +529,8 @@ li {
 }
 .footer__text {
   font-size: 1.4rem;
+=======
+    margin-left: auto;
+    margin-right: auto;
+>>>>>>> 795fec571809d64ccbba44d996a5ddf7d71825f7
 }
