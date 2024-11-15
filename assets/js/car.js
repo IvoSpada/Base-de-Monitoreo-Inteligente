@@ -28,6 +28,7 @@ function calculateCarEmissions() {
     kilometraje * fuelFactors[combustible] +
     (cilindrado / 1000) * displacementFactor;
   totalEmissionsAuto += emissionsAuto;
+  totalEmissionsAuto /= 1000;
 
   console.log(emissionsAuto);
   console.log(totalEmissionsAuto); // debug

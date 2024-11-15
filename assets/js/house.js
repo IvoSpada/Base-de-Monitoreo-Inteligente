@@ -23,7 +23,7 @@ function calculateHouseEmissions() {
   const electricityFactor = 0.2881; // kgCO2e/kWh
   const gasNaturalFactor = 0.2; // CO₂e/kWh
   const gasoleoFactor = 2.68; // CO₂e/litro
-  const carbonFactor = 2650; // CO₂e/tonelada
+  const carbonFactor = 2.65; // CO₂e/tonelada
   const glpFactor = 1.66; // CO₂e/litro
   const propanoFactor = 1.63; // CO₂e/litro
   const pelletsFactor = 25; // CO₂e/tonelada
@@ -40,6 +40,7 @@ function calculateHouseEmissions() {
   let emissionsPerPerson = totalEmissions / numberOfPeople;
 
   totalEmissionsViv += emissionsPerPerson;
+  totalEmissionsViv = totalEmissionsViv / 1000;
 
   console.log(emissionsPerPerson);
   console.log(totalEmissionsViv); // debug

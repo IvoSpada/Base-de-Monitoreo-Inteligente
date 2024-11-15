@@ -21,7 +21,7 @@ function calculateFlightEmissions() {
   const classFactors = {
     economy: 1,
     business: 1.54, // 54% more than economy
-    firstClass: 2.4, // roughly 140% more than economy 
+    firstClass: 2.4, // roughly 140% more than economy
   };
 
   // console.log(classFactors[flightClass]); // debug
@@ -39,7 +39,7 @@ function calculateFlightEmissions() {
   ).toFixed(2)} toneladas de CO2`;
 
   let elementVuelos = document.getElementById("finalVuelos");
-  elementVuelos.innerHTML = (totalEmissionsVuelos / 1000) + " toneladas de CO2";
+  elementVuelos.innerHTML = totalEmissionsVuelos / 1000 + " toneladas de CO2";
 
   clearInputFieldsVuelos();
 }
